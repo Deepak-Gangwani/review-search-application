@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Welcome To Reviews Search</title>
+<link rel="shortcut icon" href="https://www.shutterstock.com/image-vector/gift-box-stars-barcode-magnifying-260nw-1070964449.jpg" type="image/x-icon">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="color: red">Review's Search Application</h1>
+
+    <div class="form">
+        <form action="/review" method="POST">
+            <input type="text" name="content" id="content" required>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <p>(Created By Deepak Gangwani)</p>
+</div>
+{% endblock %}
+
